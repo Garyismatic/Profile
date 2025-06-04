@@ -148,15 +148,17 @@ a {
   max-height: 200px;
   position: absolute;
   bottom: -100px;
+  z-index: -1;
 }
 
 #project-list {
-  margin: 60px auto;
+  margin: 60px auto 10px;
   display: flex;
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
-  /* border: solid red 2px; */
+  border-bottom: solid white 2px;
+  padding-bottom: 30px;
 }
 .project-card {
   border: solid white 3px;
@@ -195,10 +197,11 @@ a {
   max-height: 200px;
   position: absolute;
   bottom: -120px;
+  z-index: -1;
 }
 
 #about-me-section {
-  margin: 120px auto;
+  margin: 120px auto 30px;
   padding: 30px;
   color: white;
   border-bottom: solid white 2px;
