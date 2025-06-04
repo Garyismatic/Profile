@@ -1,0 +1,124 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+body {
+  background-color: rgb(42, 43, 46);
+  border-radius: 10px;
+  padding: 20px;
+  border: solid white 2px;
+  height: 100dvh;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+@font-face {
+  font-family: "japanBrush";
+  src: url("./assets/fonts/JAPAB___.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "japanTourist";
+  src: url("./assets/fonts/Japanese_Tourist.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "jetBrains";
+  src: url("./assets/fonts/JetBrainsMono-Thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "splash";
+  src: url("./assets/fonts/RoughSplash.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+h1 {
+  color: whitesmoke;
+  margin: 0;
+  font-family: "japanTourist";
+  padding: 10px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h3 {
+  color: whitesmoke;
+  font-size: 1.3rem;
+  margin: 10px;
+  font-family: "jetBrains";
+}
+
+#myName {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 3rem;
+  border-bottom: solid 1px grey;
+}
+
+#jobTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#aiProfPic {
+  border-radius: 45%;
+  display: block;
+  margin: 30px auto;
+  width: 250px;
+  height: 250px;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+#socials {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+}
+
+.social-icon {
+  max-height: 41px;
+  max-width: 41px;
+  margin: 10px;
+}
+
+#nav-container {
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.banner-btn {
+  background-image: url("../assets/brush-stroke-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 100%;
+  max-width: 350px;
+  height: 70px;
+  position: relative;
+  margin: 5px;
+}
+
+.banner-text {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  color: black;
+  font-family: "splash";
+  font-weight: 100;
+}
