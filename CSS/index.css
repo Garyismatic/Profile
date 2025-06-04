@@ -16,25 +16,25 @@ body {
 }
 @font-face {
   font-family: "japanBrush";
-  src: url("./assets/fonts/JAPAB___.TTF") format("truetype");
+  src: url("../assets/fonts/JAPAB___.TTF") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "japanTourist";
-  src: url("./assets/fonts/Japanese_Tourist.ttf") format("truetype");
+  src: url("../assets/fonts/Japanese_Tourist.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "jetBrains";
-  src: url("./assets/fonts/JetBrainsMono-Thin.ttf") format("truetype");
+  src: url("../assets/fonts/JetBrainsMono-Thin.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "splash";
-  src: url("./assets/fonts/RoughSplash.ttf") format("truetype");
+  src: url("../assets/fonts/RoughSplash.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -56,13 +56,17 @@ h3 {
   margin: 10px;
   font-family: "jetBrains";
 }
-
+a {
+  text-decoration: none;
+}
 #myName {
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 3rem;
   border-bottom: solid 1px grey;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 #jobTitle {
@@ -72,7 +76,7 @@ h3 {
 }
 
 #aiProfPic {
-  border-radius: 45%;
+  border-radius: 50%;
   display: block;
   margin: 30px auto;
   width: 250px;
@@ -89,6 +93,14 @@ h3 {
   display: inline-block;
   margin: 10px;
   padding: 10px;
+}
+
+#logo{
+  padding: 10px;
+  margin:10px;
+  max-width: 60px;
+  max-height: 60px;
+  
 }
 
 .social-icon {
@@ -121,4 +133,57 @@ h3 {
   color: black;
   font-family: "splash";
   font-weight: 100;
+}
+
+/* projects page css below */
+
+.page-title {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+#projects-page-title {
+  max-width: 100%;
+  max-height: 200px;
+  position: absolute;
+  bottom: -100px;
+}
+
+#project-list {
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  /* border: solid red 2px; */
+}
+.project-card {
+  border: solid white 3px;
+  border-radius: 5%;
+  overflow: hidden;
+  max-width: 350px;
+  min-width: 250px;
+  margin: 10px;
+}
+.project-title {
+  background-color: grey;
+  margin: 0;
+  padding: 20px;
+  font-family: "splash";
+  font-size: 1rem;
+  font-weight: 100;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.project-image {
+  max-width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.project-description {
+  padding: 0px 30px 30px 30px;
+  color: grey;
 }
