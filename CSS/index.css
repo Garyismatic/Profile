@@ -35,7 +35,8 @@ h1 {
   padding: 10px;
 }
 
-h2 {
+h2,
+h3 {
   color: whitesmoke;
   font-size: 1.3rem;
   margin: 10px;
