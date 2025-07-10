@@ -35,7 +35,7 @@ h1 {
   padding: 10px;
 }
 
-h3 {
+h2 {
   color: whitesmoke;
   font-size: 1.3rem;
   margin: 10px;
@@ -124,7 +124,7 @@ a {
   flex-wrap: wrap;
 }
 
-#project-list-header{
+#project-list-header {
   width: 80%;
   max-width: 500px;
   margin-left: 50%;
