@@ -90,7 +90,7 @@ ul svg {
   fill: var(--electric);
 }
 
-.social:hover {
+.social-link:hover .social {
   fill: var(--neonGreen);
 }
 
