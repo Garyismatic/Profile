@@ -106,8 +106,8 @@ ul svg {
 .main-article img {
   margin: 0 auto;
   object-fit: cover;
-  object-position: top;
-  height: 175px;
+  object-position: middle;
+  height: 200px;
   width: 300px;
   overflow: hidden;
 }
