@@ -112,6 +112,35 @@ ul svg {
   overflow: hidden;
 }
 
+/* project section styling */
+
+main {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.projects-header {
+  margin: 2rem 0;
+}
+
+.project-card {
+  background-color: var(--charcoal);
+  padding: 3rem;
+  border-radius: var(--corners);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.project-card ul li {
+  color: var(--gunmetal);
+  background-color: var(--electric);
+  border-radius: var(--corners);
+  padding: 0.6rem;
+  list-style: none;
+}
+
 /* footer styling */
 
 footer {
