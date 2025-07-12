@@ -124,6 +124,12 @@ main {
   margin: 2rem 0;
 }
 
+.projects {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 3rem;
+}
+
 .project-card {
   background-color: var(--charcoal);
   padding: 3rem;
