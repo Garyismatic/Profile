@@ -1,4 +1,4 @@
-#Gary Evans – Portfolio Site
+Gary Evans – Portfolio Site
 This is the source code for my personal portfolio site, designed to showcase who I am as a developer and highlight some of the projects I’ve worked on.
 
 🔍 About This Project
