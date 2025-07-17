@@ -165,7 +165,16 @@ main {
   border-radius: var(--corners-small);
   padding: 0.5rem;
   font-size: calc(var(--base-font-size) * 0.7);
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
+}
+
+.hosted li {
+  background-color: var(--charcoal);
+  border-radius: 0;
+  width: 36px;
+  height: 36px;
+  margin-top: 1.5rem;
+  padding: 0;
 }
 
 .project-card img {
