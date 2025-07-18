@@ -5,19 +5,19 @@
   --electric: #00bfff;
   --lightGrey: #e0e0e0;
   --slateGrey: #888888;
-  --lightCream: #faf9f6;
-  --lavender: #ede7f6;
-  --teal: #a0e7e5;
-  --coral: #ffb5a7;
-  --deepGrey: #333333;
-  --mediumGrey: #777777;
-  --corners: 24px 0;
+  --ld-background: light-dark(#fef6e4, var(--gunmetal));
+  --ld-textColor: light-dark(#1e1e1e, var(--lightGrey));
+  --ld-headerColor: light-dark(#7f5af0, var(--electric));
+  --ld-highlight: light-dark(#ff8fab, var(--neonGreen));
+  --ld-surface: light-dark(#fff1f1, var(--charcoal));
+  --corners: 34px 0;
   --corners-small: 10px 0;
   --base-font-size: 1rem;
 }
 
 html {
   box-sizing: border-box;
+  color-scheme: light dark;
 }
 *,
 *::before,
@@ -27,8 +27,8 @@ html {
 
 body {
   font-size: var(--base-font-size);
-  background-color: var(--gunmetal);
-  color: var(--lightGrey);
+  background-color: var(--ld-background);
+  color: var(--ld-textColor);
   font-family: "Work Sans", sans-serif;
 }
 
@@ -49,7 +49,7 @@ h2 {
   margin: 0;
   font-size: var(--base-font-size);
   text-transform: uppercase;
-  color: var(--electric);
+  color: var(--ld-headerColor);
   letter-spacing: 0.25em;
   font-family: "Orbitron", sans-serif;
   letter-spacing: 0.5rem;
@@ -64,11 +64,11 @@ p {
 }
 
 a {
-  color: var(--electric);
+  color: var(--ld-headerColor);
 }
 
 a:hover {
-  color: var(--neonGreen);
+  color: var(--ld-highlight);
 }
 
 img {
@@ -93,11 +93,11 @@ ul svg {
 }
 
 .social {
-  fill: var(--electric);
+  fill: var(--ld-headerColor);
 }
 
 .social-link:hover .social {
-  fill: var(--neonGreen);
+  fill: var(--ld-highlight);
 }
 
 /*about me styling*/
@@ -137,7 +137,7 @@ main {
 }
 
 .project-card {
-  background-color: var(--charcoal);
+  background-color: var(--ld-surface);
   padding: 1.5rem;
   border-radius: var(--corners);
   display: grid;
@@ -160,8 +160,8 @@ main {
 }
 
 .project-card li {
-  color: var(--gunmetal);
-  background-color: var(--electric);
+  color: var(--ld-background);
+  background-color: var(--ld-headerColor);
   border-radius: var(--corners-small);
   padding: 0.5rem;
   font-size: calc(var(--base-font-size) * 0.7);
@@ -169,7 +169,7 @@ main {
 }
 
 .hosted li {
-  background-color: var(--charcoal);
+  background-color: var(--ld-surface);
   border-radius: 0;
   width: 36px;
   height: 36px;
@@ -180,10 +180,6 @@ main {
 .project-card img {
   grid-row: 1/2;
   margin: 0 auto;
-}
-
-.project-card:hover {
-  box-shadow: #39ff14 0 0 20px 1px;
 }
 
 /* footer styling */
