@@ -5,20 +5,29 @@
   --electric: #00bfff;
   --lightGrey: #e0e0e0;
   --slateGrey: #888888;
-  --lightCream: #faf9f6;
-  --lavender: #ede7f6;
-  --teal: #a0e7e5;
-  --coral: #ffb5a7;
-  --deepGrey: #333333;
-  --mediumGrey: #777777;
-  --corners: 24px 0;
+  --ld-background: light-dark(#fef6e4, var(--gunmetal));
+  --ld-textColor: light-dark(#1e1e1e, var(--lightGrey));
+  --ld-headerColor: light-dark(#7f5af0, var(--electric));
+  --ld-highlight: light-dark(#ff8fab, var(--neonGreen));
+  --ld-surface: light-dark(#fff1f1, var(--charcoal));
+  --corners: 34px 0;
   --corners-small: 10px 0;
   --base-font-size: 1rem;
 }
 
 html {
   box-sizing: border-box;
+  color-scheme: light dark;
 }
+
+html:has(#light-dark-switch #light:checked) {
+  color-scheme: light;
+}
+
+html:has(#light-dark-switch #dark:checked) {
+  color-scheme: dark;
+}
+
 *,
 *::before,
 *::after {
@@ -27,8 +36,8 @@ html {
 
 body {
   font-size: var(--base-font-size);
-  background-color: var(--gunmetal);
-  color: var(--lightGrey);
+  background-color: var(--ld-background);
+  color: var(--ld-textColor);
   font-family: "Work Sans", sans-serif;
 }
 
@@ -49,7 +58,7 @@ h2 {
   margin: 0;
   font-size: var(--base-font-size);
   text-transform: uppercase;
-  color: var(--electric);
+  color: var(--ld-headerColor);
   letter-spacing: 0.25em;
   font-family: "Orbitron", sans-serif;
   letter-spacing: 0.5rem;
@@ -64,11 +73,11 @@ p {
 }
 
 a {
-  color: var(--electric);
+  color: var(--ld-headerColor);
 }
 
 a:hover {
-  color: var(--neonGreen);
+  color: var(--ld-highlight);
 }
 
 img {
@@ -93,11 +102,11 @@ ul svg {
 }
 
 .social {
-  fill: var(--electric);
+  fill: var(--ld-headerColor);
 }
 
 .social-link:hover .social {
-  fill: var(--neonGreen);
+  fill: var(--ld-highlight);
 }
 
 /*about me styling*/
@@ -137,7 +146,7 @@ main {
 }
 
 .project-card {
-  background-color: var(--charcoal);
+  background-color: var(--ld-surface);
   padding: 1.5rem;
   border-radius: var(--corners);
   display: grid;
@@ -160,8 +169,8 @@ main {
 }
 
 .project-card li {
-  color: var(--gunmetal);
-  background-color: var(--electric);
+  color: var(--ld-background);
+  background-color: var(--ld-headerColor);
   border-radius: var(--corners-small);
   padding: 0.5rem;
   font-size: calc(var(--base-font-size) * 0.7);
@@ -169,7 +178,7 @@ main {
 }
 
 .hosted li {
-  background-color: var(--charcoal);
+  background-color: var(--ld-surface);
   border-radius: 0;
   width: 36px;
   height: 36px;
@@ -246,6 +255,9 @@ footer {
   .footer-text {
     grid-template-columns: repeat(3, 1fr);
   }
+  .radio-switch {
+    justify-content: flex-end;
+  }
 }
 
 @media (min-width: 850px) {
@@ -263,5 +275,91 @@ footer {
 
   .project-card ul {
     justify-content: flex-start;
+  }
+}
+
+@layer switch {
+  .radio-switch {
+    border: none;
+    padding: 0;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .radio-switch legend {
+    font-size: 2px;
+    opacity: 0;
+    position: absolute;
+  }
+
+  .radio-switch label {
+    display: inline-block;
+    line-height: 2;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .radio-switch input {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .radio-switch label:first-of-type {
+    padding-right: 5em;
+  }
+
+  .radio-switch label:last-child {
+    margin-left: -4.25em;
+    padding-left: 5em;
+  }
+
+  .radio-switch:focus-within label:first-of-type:after {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--electric);
+  }
+
+  .radio-switch label:first-of-type:before,
+  .radio-switch label:first-of-type:after {
+    border: 1px solid var(--gunmetal);
+    content: "";
+    height: 2em;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    vertical-align: middle;
+  }
+
+  .radio-switch label:first-of-type:before {
+    background: #fef6e4;
+    border: 1px solid var(--gunmetal);
+    border-radius: 100%;
+    position: absolute;
+    right: -0.075em;
+    transform: translateX(0em);
+    transition: transform 0.2s ease-in-out;
+    width: 2em;
+    z-index: 2;
+  }
+
+  .radio-switch label:first-of-type:after {
+    background: var(--electric);
+    border-radius: 1em;
+    margin: 0 1em;
+    transition: background 0.2s ease-in-out;
+    width: 4em;
+  }
+
+  .radio-switch input:first-of-type:checked ~ label:first-of-type:after {
+    background: var(--gunmetal);
+  }
+
+  .radio-switch input:first-of-type:checked ~ label:first-of-type:before {
+    transform: translateX(-2em);
+  }
+
+  .radio-switch input:last-of-type:checked ~ label:last-of-type {
+    z-index: 1;
   }
 }
